@@ -1,0 +1,82 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  position: relative;
+}
+
+.time-display {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.date-display,
+.weekday-display {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.animation {
+  position: absolute;
+  top: -50px;
+  width: 100px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.animation .string {
+  width: 2px;
+  height: 150px;
+  background-color: #000;
+  animation: swing 2s infinite ease-in-out;
+}
+
+.animation .weight {
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-top: 10px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes swing {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
